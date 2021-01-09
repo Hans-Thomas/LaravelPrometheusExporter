@@ -1,20 +1,8 @@
 # LaravelPrometheusExporter
-
-[![Software license][ico-license]](LICENSE)
-[![Travis][ico-travis]][link-travis]
-[![Coveralls](https://coveralls.io/repos/github/triadev/LaravelPrometheusExporter/badge.svg?branch=master)](https://coveralls.io/github/triadev/LaravelPrometheusExporter?branch=master)
-[![CodeCov](https://codecov.io/gh/triadev/LaravelPrometheusExporter/branch/master/graph/badge.svg)](https://codecov.io/gh/triadev/LaravelPrometheusExporter)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/triadev/LaravelPrometheusExporter/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/triadev/LaravelPrometheusExporter/?branch=master)
-[![Latest stable][ico-version-stable]][link-packagist]
-[![Monthly installs][ico-downloads-monthly]][link-downloads]
-[![Total Downloads](https://img.shields.io/packagist/dt/triadev/laravel-prometheus-exporter.svg?style=flat-square)](https://packagist.org/packages/triadev/laravel-prometheus-exporter)
-[![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/triadev/LaravelPrometheusExporter.svg)](http://isitmaintained.com/project/triadev/LaravelPrometheusExporter "Average time to resolve an issue")
-[![Percentage of issues still open](http://isitmaintained.com/badge/open/triadev/LaravelPrometheusExporter.svg)](http://isitmaintained.com/project/triadev/LaravelPrometheusExporter "Percentage of issues still open")
-
 A laravel and lumen service provider to export metrics for prometheus.
 
 ## Supported laravel versions
-[![Laravel 7.0][icon-l70]][link-laravel]
+Laravel 7.x
 
 ## Main features
 - Metrics with APC
@@ -71,16 +59,7 @@ Of course you can also register your own route. Here is an example:
 ```
 Route::get(
     ROUTE,
-    \Triadev\PrometheusExporter\Controller\LaravelController::class . '@metrics'
-);
-```
-
-#### Lumen
-When you are using lumen you must register the route on your own. Here is an example:
-```
-Route::get(
-    ROUTE,
-    \Triadev\PrometheusExporter\Controller\LumenController::class . '@metrics'
+    [ \Triadev\PrometheusExporter\Controller\LaravelController::class, 'metrics']
 );
 ```
 
@@ -124,43 +103,8 @@ Alternatively, fork the project and make a pull request. :)
 ## Contributing
 Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
-## Credits
-- [Christopher Lorke][link-author]
-- [All Contributors][link-contributors]
-
 ## Other
-
-### Project related links
-- [Wiki](https://github.com/triadev/LaravelPrometheusExporter/wiki)
-- [Issue tracker](https://github.com/triadev/LaravelPrometheusExporter/issues)
-
-### Author
-- [Christopher Lorke](mailto:christopher.lorke@gmx.de)
 
 ### License
 The code for LaravelPrometheusExporter is distributed under the terms of the MIT license (see [LICENSE](LICENSE)).
 
-[ico-license]: https://img.shields.io/github/license/triadev/LaravelPrometheusExporter.svg?style=flat-square
-[ico-version-stable]: https://img.shields.io/packagist/v/triadev/laravel-prometheus-exporter.svg?style=flat-square
-[ico-downloads-monthly]: https://img.shields.io/packagist/dm/triadev/laravel-prometheus-exporter.svg?style=flat-square
-[ico-travis]: https://travis-ci.org/triadev/LaravelPrometheusExporter.svg?branch=master
-
-[link-packagist]: https://packagist.org/packages/triadev/laravel-prometheus-exporter
-[link-downloads]: https://packagist.org/packages/triadev/laravel-prometheus-exporter/stats
-[link-travis]: https://travis-ci.org/triadev/LaravelPrometheusExporter
-[link-scrutinizer]: https://scrutinizer-ci.com/g/triadev/LaravelPrometheusExporter/badges/quality-score.png?b=master
-
-[icon-l56]: https://img.shields.io/badge/Laravel-5.6-brightgreen.svg?style=flat-square
-[icon-l57]: https://img.shields.io/badge/Laravel-5.7-brightgreen.svg?style=flat-square
-[icon-l58]: https://img.shields.io/badge/Laravel-5.8-brightgreen.svg?style=flat-square
-[icon-l60]: https://img.shields.io/badge/Laravel-6.0-brightgreen.svg?style=flat-square
-
-[icon-lumen56]: https://img.shields.io/badge/Lumen-5.6-brightgreen.svg?style=flat-square
-[icon-lumen57]: https://img.shields.io/badge/Lumen-5.7-brightgreen.svg?style=flat-square
-[icon-lumen58]: https://img.shields.io/badge/Lumen-5.8-brightgreen.svg?style=flat-square
-[icon-lumen60]: https://img.shields.io/badge/Lumen-6.0-brightgreen.svg?style=flat-square
-
-[link-laravel]: https://laravel.com
-[link-lumen]: https://lumen.laravel.com
-[link-author]: https://github.com/triadev
-[link-contributors]: ../../contributors
