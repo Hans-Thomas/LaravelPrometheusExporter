@@ -21,4 +21,6 @@ return [
     ],
 
     'buckets_per_route' => [],
+
+    'path' => 'hans/pe/metrics'
 ];
