@@ -32,7 +32,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Triadev\\PrometheusExporter\\": "src/"
+            "hans-thomas\\PrometheusExporter\\": "src/"
         }
     },
     "autoload-dev": {
@@ -43,7 +43,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Triadev\\PrometheusExporter\\Provider\\PrometheusExporterServiceProvider"
+                "hans-thomas\\PrometheusExporter\\Provider\\PrometheusExporterServiceProvider"
             ]
         }
     },
