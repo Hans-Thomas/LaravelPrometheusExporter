@@ -20,5 +20,5 @@ return [
         'address' => env('PROMETHEUS_PUSH_GATEWAY_ADDRESS', 'localhost:9091')
     ],
 
-    'buckets_per_route' => []
+    'buckets_per_route' => [],
 ];
