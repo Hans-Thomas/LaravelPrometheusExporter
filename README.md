@@ -20,7 +20,7 @@ Laravel 7.x
 
 Once installed you can now publish your config file and set your correct configuration for using the package.
 ```php
-php artisan vendor:publish --provider="Triadev\PrometheusExporter\Provider\PrometheusExporterServiceProvider" --tag="config"
+php artisan vendor:publish --provider="Hans\PrometheusExporter\Provider\PrometheusExporterServiceProvider" --tag="config"
 ```
 
 This will create a file ```config/prometheus-exporter.php```.
