@@ -1,6 +1,6 @@
 {
-    "name": "triadev/laravel-prometheus-exporter",
-    "description": "A laravel and lumen service provider to export metrics for prometheus.",
+    "name": "hans-thomas/laravel-prometheus-exporter",
+    "description": "A laravel service provider to export metrics for prometheus.",
     "keywords": [
         "Laravel",
         "Prometheus",
@@ -9,22 +9,21 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Christopher Lorke",
-            "email": "christopher.lorke@gmx.de"
+            "name": "mohammad mortazavi",
+            "email": "s.mohammad@live.com"
         }
     ],
     "require": {
-        "php": ">=7.2",
+        "php": ">=7.4",
         "endclothing/prometheus_client_php": "^1.0",
-        "illuminate/support": "^5.6|^6.0"
+        "illuminate/support": "^7.0"
     },
     "require-dev": {
         "phpunit/phpunit": "~7.0",
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "~1.0",
         "orchestra/testbench": "~3.0",
-        "laravel/framework": "^5.6|^6.0",
-        "laravel/lumen-framework": "^5.6|^6.0",
+        "laravel/framework": "^7.0",
         "squizlabs/php_codesniffer": "^3.0"
     },
     "suggest": {
