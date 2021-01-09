@@ -1,6 +1,6 @@
 <?php
 
 Route::get(
-    'triadev/pe/metrics',
-    [\Triadev\PrometheusExporter\Controller\LaravelController::class ,'metrics']
-)->name('triadev.pe.metrics');
+    'hans/pe/metrics',
+    [\Hans\PrometheusExporter\Controller\LaravelController::class ,'metrics']
+)->name('Hans.pe.metrics');

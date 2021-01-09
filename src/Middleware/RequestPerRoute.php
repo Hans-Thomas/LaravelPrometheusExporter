@@ -1,11 +1,11 @@
 <?php
-namespace Triadev\PrometheusExporter\Middleware;
+namespace Hans\PrometheusExporter\Middleware;
 
 use Illuminate\Http\Request;
 use Closure;
 use Illuminate\Http\Response;
 use Prometheus\Exception\MetricsRegistrationException;
-use Triadev\PrometheusExporter\Contract\PrometheusExporterContract;
+use Hans\PrometheusExporter\Contract\PrometheusExporterContract;
 
 class RequestPerRoute
 {
@@ -88,7 +88,8 @@ class RequestPerRoute
         $bucketsPerRoute = null;
 
         if ($bucketsPerRouteConfig = config('prometheus-exporter.buckets_per_route')) {
-            $bucketsPerRoute = array_key_exists($routeName,$bucketsPerRouteConfig) ? $bucketsPerRouteConfig[$routeName] : null;
+            $bucketsPerRoute = array_key_exists($routeName, $bucketsPerRouteConfig) ?
+                                                                    $bucketsPerRouteConfig[$routeName] : null;
         }
 
         $this->prometheusExporter->setHistogram(
