@@ -3,7 +3,7 @@ namespace Tests;
 
 use Illuminate\Foundation\Testing\TestResponse;
 use phpDocumentor\Reflection\Types\Callable_;
-use Triadev\PrometheusExporter\Contract\PrometheusExporterContract;
+use Hans\PrometheusExporter\Contract\PrometheusExporterContract;
 
 class PrometheusExporterTest extends TestCase
 {

@@ -1,7 +1,7 @@
 <?php
 namespace Tests;
 
-use Triadev\PrometheusExporter\Provider\PrometheusExporterServiceProvider;
+use Hans\PrometheusExporter\Provider\PrometheusExporterServiceProvider;
 
 class TestCase extends \Orchestra\Testbench\TestCase
 {
@@ -12,7 +12,7 @@ class TestCase extends \Orchestra\Testbench\TestCase
     {
         parent::setUp();
     }
-    
+
     /**
      * @inheritDoc
      *
@@ -24,7 +24,7 @@ class TestCase extends \Orchestra\Testbench\TestCase
     {
         parent::tearDown();
     }
-    
+
     /**
      * Define environment setup.
      *
@@ -35,12 +35,12 @@ class TestCase extends \Orchestra\Testbench\TestCase
     protected function getEnvironmentSetUp($app)
     {
         $app['config']->set('prometheus-exporter.adapter', 'apc');
-        
+
         $app['config']->set('prometheus-exporter.buckets_per_route', [
             'requestPerRoute' => [10, 20, 50, 100, 200]
         ]);
     }
-    
+
     /**
      * Get package providers.  At a minimum this is the package being tested, but also
      * would include packages upon which our package depends, e.g. Cartalyst/Sentry

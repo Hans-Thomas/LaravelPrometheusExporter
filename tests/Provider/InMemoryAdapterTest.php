@@ -3,7 +3,7 @@ namespace Tests\Provider;
 
 use Prometheus\Storage\Adapter;
 use Tests\TestCase;
-use Triadev\PrometheusExporter\Provider\PrometheusExporterServiceProvider;
+use Hans\PrometheusExporter\Provider\PrometheusExporterServiceProvider;
 
 class InMemoryAdapterTest extends TestCase
 {
@@ -20,12 +20,12 @@ class InMemoryAdapterTest extends TestCase
     protected function getPackageProviders($app)
     {
         $app['config']->set('prometheus-exporter.adapter', 'inmemory');
-        
+
         return [
             PrometheusExporterServiceProvider::class
         ];
     }
-    
+
     /**
      * @test
      */

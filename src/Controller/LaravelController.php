@@ -1,10 +1,10 @@
 <?php
-namespace Triadev\PrometheusExporter\Controller;
+namespace Hans\PrometheusExporter\Controller;
 
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
 use Prometheus\RenderTextFormat;
-use Triadev\PrometheusExporter\PrometheusExporter;
+use Hans\PrometheusExporter\PrometheusExporter;
 
 class LaravelController extends Controller
 {

@@ -3,7 +3,7 @@ namespace Tests\Middleware;
 
 use Tests\TestCase;
 use Illuminate\Routing\Router;
-use Triadev\PrometheusExporter\Contract\PrometheusExporterContract;
+use Hans\PrometheusExporter\Contract\PrometheusExporterContract;
 
 class RequestPerRouteTest extends TestCase
 {

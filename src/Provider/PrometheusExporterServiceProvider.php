@@ -1,15 +1,15 @@
 <?php
-namespace Triadev\PrometheusExporter\Provider;
+namespace Hans\PrometheusExporter\Provider;
 
 use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
 use Prometheus\Storage\InMemory;
-use Triadev\PrometheusExporter\Contract\PrometheusExporterContract;
+use Hans\PrometheusExporter\Contract\PrometheusExporterContract;
 use Prometheus\Storage\Redis;
 use Prometheus\Storage\APC;
 use Prometheus\Storage\Adapter;
-use Triadev\PrometheusExporter\Middleware\RequestPerRoute;
-use Triadev\PrometheusExporter\PrometheusExporter;
+use Hans\PrometheusExporter\Middleware\RequestPerRoute;
+use Hans\PrometheusExporter\PrometheusExporter;
 
 class PrometheusExporterServiceProvider extends ServiceProvider
 {
@@ -23,11 +23,11 @@ class PrometheusExporterServiceProvider extends ServiceProvider
         $this->bootConfig();
         $this->bootRoutes();
     }
-    
+
     private function bootConfig()
     {
         $source = realpath(__DIR__ . '/../Config/config.php');
-    
+
         if (class_exists('Illuminate\Foundation\Application', false)) {
             $this->publishes([
                 __DIR__ . '/../Config/config.php' => config_path('prometheus-exporter.php'),
@@ -35,10 +35,10 @@ class PrometheusExporterServiceProvider extends ServiceProvider
         } elseif (class_exists('Laravel\Lumen\Application', false)) {
             $this->app/** @scrutinizer ignore-call */->configure('prometheus-exporter');
         }
-    
+
         $this->mergeConfigFrom($source, 'prometheus-exporter');
     }
-    
+
     private function bootRoutes()
     {
         if (class_exists('Illuminate\Foundation\Application', false)) {
@@ -54,17 +54,17 @@ class PrometheusExporterServiceProvider extends ServiceProvider
     public function register()
     {
         $this->mergeConfigFrom(__DIR__ . '/../Config/config.php', 'prometheus-exporter');
-    
+
         $this->registerAdapter();
         $this->registerMiddlewareForRequestMetrics();
-    
+
         $this->app->bind(
             PrometheusExporterContract::class,
             PrometheusExporter::class,
             true
         );
     }
-    
+
     /**
      * @throws \ErrorException
      */
@@ -89,7 +89,7 @@ class PrometheusExporterServiceProvider extends ServiceProvider
                 throw new \ErrorException('"prometheus-exporter.adapter" must be either apc or redis');
         }
     }
-    
+
     private function registerMiddlewareForRequestMetrics()
     {
         if (class_exists('Illuminate\Foundation\Application', false)) {

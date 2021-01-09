@@ -32,7 +32,7 @@
     },
     "autoload": {
         "psr-4": {
-            "hans-thomas\\PrometheusExporter\\": "src/"
+            "Hans\\PrometheusExporter\\": "src/"
         }
     },
     "autoload-dev": {

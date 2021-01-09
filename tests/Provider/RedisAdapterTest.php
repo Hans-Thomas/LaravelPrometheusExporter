@@ -3,7 +3,7 @@ namespace Tests\Provider;
 
 use Prometheus\Storage\Adapter;
 use Tests\TestCase;
-use Triadev\PrometheusExporter\Provider\PrometheusExporterServiceProvider;
+use Hans\PrometheusExporter\Provider\PrometheusExporterServiceProvider;
 
 class RedisAdapterTest extends TestCase
 {
@@ -20,12 +20,12 @@ class RedisAdapterTest extends TestCase
     protected function getPackageProviders($app)
     {
         $app['config']->set('prometheus-exporter.adapter', 'redis');
-        
+
         return [
             PrometheusExporterServiceProvider::class
         ];
     }
-    
+
     /**
      * @test
      */
