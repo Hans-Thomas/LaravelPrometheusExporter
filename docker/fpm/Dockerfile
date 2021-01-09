@@ -22,7 +22,6 @@ RUN apk add --no-cache --update \
     rm -f /usr/local/etc/php/conf.d/docker-php-ext-apcu.ini && \
     curl -sS https://getcomposer.org/installer \
         | php -- --install-dir=/usr/local/bin --filename=composer && \
-    apk del .build-deps && \
     rm -rf /tmp/* /var/tmp/*
 
 # config
