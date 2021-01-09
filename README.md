@@ -14,16 +14,7 @@
 A laravel and lumen service provider to export metrics for prometheus.
 
 ## Supported laravel versions
-[![Laravel 5.6][icon-l56]][link-laravel]
-[![Laravel 5.7][icon-l57]][link-laravel]
-[![Laravel 5.8][icon-l58]][link-laravel]
-[![Laravel 6.0][icon-l60]][link-laravel]
-
-## Supported lumen versions
-[![Lumen 5.6][icon-lumen56]][link-lumen]
-[![Lumen 5.7][icon-lumen57]][link-lumen]
-[![Lumen 5.8][icon-lumen58]][link-lumen]
-[![Lumen 6.0][icon-lumen60]][link-lumen]
+[![Laravel 7.0][icon-l70]][link-laravel]
 
 ## Main features
 - Metrics with APC
@@ -35,12 +26,9 @@ A laravel and lumen service provider to export metrics for prometheus.
 ## Installation
 
 ### Composer
-> composer require triadev/laravel-prometheus-exporter
+> composer require hans-thomas/laravel-prometheus-exporter
 
 ### Application
-
-The package is registered through the package discovery of laravel and Composer.
->https://laravel.com/docs/5.8/packages
 
 Once installed you can now publish your config file and set your correct configuration for using the package.
 ```php
