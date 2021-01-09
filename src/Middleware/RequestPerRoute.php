@@ -32,6 +32,7 @@ class RequestPerRoute
      */
     public function handle(Request $request, Closure $next)
     {
+        $request->path() == config( 'prometheus-exporter.path' ) ? $next( $request ) : 'collect the data';
         $start = microtime(true);
 
         /** @var Response $response */
