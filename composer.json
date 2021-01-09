@@ -43,7 +43,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "hans-thomas\\PrometheusExporter\\Provider\\PrometheusExporterServiceProvider"
+                "Hans\\PrometheusExporter\\Provider\\PrometheusExporterServiceProvider"
             ]
         }
     },
