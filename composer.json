@@ -15,7 +15,7 @@
     ],
     "require": {
         "php": ">=7.4",
-        "endclothing/prometheus_client_php": "^1.0",
+        "hans-thomas/prometheus_client_php": "^1.0",
         "illuminate/support": "^7.0"
     },
     "require-dev": {
